@@ -1,1 +1,44 @@
+
+
+@font-face {
+    font-family: 'RobotoThin';
+    src: url('./fonts/Roboto-Thin.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('./fonts/Roboto-Light.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'RobotoExtra';
+    src: url('./fonts/Roboto-ExtraLight.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('./fonts/Roboto-Regular.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'RobotoItalic';
+    src: url('./fonts/Roboto-LightItalic.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('./fonts/Roboto-SemiBold.ttf') format(truetype);
+}
+
 @import "tailwindcss";
+
+@theme {
+    --font-roboto-thin: RobotoThin;
+    --font-roboto-light: RobotoLight;
+    --font-roboto-extra: RobotoExtra;
+    --font-roboto-regular: RobotoRegular;
+    --font-roboto-italic: RobotoItalic;
+    --font-roboto-bold: RobotoBold;
+    --color-main-800: oklch(27.4% 0.006 286.033);
+    --color-secondary:#615FFF   
+}
