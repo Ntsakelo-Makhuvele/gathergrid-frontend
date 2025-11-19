@@ -37,7 +37,7 @@ export const services = [
         service_details:{
             services:['decor'],
             description:'Are you looking for the best decor in Gauteng, say less, we have you covered',
-            service_images: ["https://images.pexels.com/photos/32854440/pexels-photo-32854440.jpeg","https://images.pexels.com/photos/2972463/pexels-photo-2972463.jpeg","https://images.pexels.com/photos/18573170/pexels-photo-18573170.jpeg"],
+            service_images: ["https://images.pexels.com/photos/32854440/pexels-photo-32854440.jpeg","https://images.pexels.com/photos/2972463/pexels-photo-2972463.jpeg","https://images.pexels.com/photos/18573170/pexels-photo-18573170.jpeg","https://images.pexels.com/photos/18573170/pexels-photo-18573170.jpeg","https://images.pexels.com/photos/18573170/pexels-photo-18573170.jpeg"],
             service_rating: 5,
             ratings_count: 241,
             locations:[{region:'Gauteng', areas:['Midrand','Germiston','Soweto']}],

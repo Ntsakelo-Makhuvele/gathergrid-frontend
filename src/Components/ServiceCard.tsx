@@ -5,7 +5,7 @@ import { StarIcon } from "@heroicons/react/24/outline"
 // 1. Core Interfaces
 
 /** Defines the structure for a Service Package (Bronze, Silver, Gold, Platinum). */
-interface Package {
+export interface Package {
   //package: 'Bronze' | 'Silver' | 'Gold' | 'Platinum'; // Uses a Union Type for consistency
   package: string,
   price: number;
@@ -30,14 +30,14 @@ interface Provider {
 }
 
 /** Defines the specific service offerings and related business information. */
-interface ServiceDetails {
-  services: string[]; // List of services offered by the provider (e.g., 'photography', 'decor')
-  description: string;
-  service_images: string[]; // Array of image URLs for the gallery
-  service_rating: number; // The average rating (e.g., 4.5, 5)
-  ratings_count: number; // Total number of ratings/reviews
-  locations: Location[]; // Array of regions and areas covered
-  starting_price: number;
+export interface ServiceDetails {
+  services?: string[]; // List of services offered by the provider (e.g., 'photography', 'decor')
+  description?: string;
+  service_images?: string[]; // Array of image URLs for the gallery
+  service_rating?: number; // The average rating (e.g., 4.5, 5)
+  ratings_count?: number; // Total number of ratings/reviews
+  locations?: Location[]; // Array of regions and areas covered
+  starting_price?: number;
   packages?: Package[]; // Array of defined price packages (optional, as some services might not have them defined yet)
 }
 
@@ -52,13 +52,13 @@ const ServiceCard = (serviceData: ServiceListing) => {
     return (
         <Link to={`/service/provider/${serviceData.id}`}>
         <div key={serviceData.id}>
-                        <ImageSlide images={serviceData.service_details.service_images}/>
+                        <ImageSlide images={serviceData.service_details.service_images!}/>
                         <Avatar avatar_type="small" display_name={serviceData.provider.firstName}  profile_pricture={serviceData.provider.profile_pic}/>
                         <div className="p-4 pt-0">
                             <p className="text-lg font-roboto-regular line-clamp-3 hover:underline">{serviceData.service_details.description}</p> 
                             <div className="mt-2">
                             <StarIcon className="size-5 inline mr-1"/>
-                            <p className="inline relative top-[3px] font-roboto-bold">{serviceData.service_details.service_rating.toFixed(1)} <span className="font-roboto-regular">({serviceData.service_details.ratings_count})</span></p>
+                            <p className="inline relative top-[3px] font-roboto-bold">{serviceData.service_details.service_rating!.toFixed(1)} <span className="font-roboto-regular">({serviceData.service_details.ratings_count})</span></p>
                             </div>
                             <div className="mt-2">
                                 <p className="font-roboto-bold text-lg">From ZAR {serviceData.service_details.starting_price}</p>
