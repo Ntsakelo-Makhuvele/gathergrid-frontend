@@ -15,7 +15,7 @@ describe("Service Card Component", () => {
        )
        expect(screen.getByText(service.provider.firstName)).toBeInTheDocument();
        expect(screen.getByText(service.service_details.description)).toBeInTheDocument();
-       expect(screen.getByText(/5\.0/)).toBeInTheDocument();
+       expect(screen.getByText(/4\.5/)).toBeInTheDocument();
        expect(screen.getByText(/\(241\)/)).toBeInTheDocument();
        expect(screen.getByText(`From ZAR ${service.service_details.starting_price}`)).toBeInTheDocument()
        
@@ -26,7 +26,7 @@ describe("Service Card Component", () => {
         <ServiceCard  id={service.id} provider={service.provider} service_details={service.service_details}/>
         </BrowserRouter>
         )
-       const expectedPath = `/service/provider/${service.id}`
+       const expectedPath = `/service/provider/profile?id=${service.id}`
        
        const linkElement = screen.getByText(service.provider.firstName).closest('a');
 

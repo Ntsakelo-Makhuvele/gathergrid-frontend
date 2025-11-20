@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import logo from '../../assets/logo.svg'
 import { CalendarIcon,CalendarDateRangeIcon,UserIcon,ChatBubbleOvalLeftIcon,XMarkIcon,Bars3Icon } from "@heroicons/react/24/outline";
 import { Dialog, DialogPanel } from "@headlessui/react";
@@ -8,7 +8,7 @@ const DashboardLayout = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     return (
         <div>
-             <div className="flex lg:hidden p-8">
+             <div className="flex lg:hidden p-8 font-roboto-regular">
                      <button
                        type="button"
                        onClick={() => setMobileMenuOpen(true)}
@@ -18,28 +18,28 @@ const DashboardLayout = () => {
                        <Bars3Icon aria-hidden="true" className="size-6" />
                      </button>
                    </div>
-        <div className="grid grid-cols-12 h-[100vh] gap-4">
-            <div className="col-span-3 h-full border-r-1 border-gray-300 hidden lg:block">
+        <div className="grid grid-cols-12 h-[100vh]  gap-4">
+            <div className="col-span-3 h-full border-r-1 border-gray-300 hidden lg:block fixed left-0 right-[80%]">
                 <div className="px-8 mt-10">
                    <img src={logo} alt="logo" className="h-8 w-auto"/>
                 </div>
                 <div className="px-8 mb-0 mt-5 mb-3">
-               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md">
+               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md font-roboto-regular">
                 <CalendarIcon className="size-6 inline mr-3" /><span className="relative top-[3px]">Book</span>
                </Link>
                 </div>
                 <div className="px-8 mb-3">
-               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md">
+               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md  font-roboto-regular">
                 <CalendarDateRangeIcon className="size-6 inline mr-3" /><span className="relative top-[3px]">Availability</span>
                </Link>
                 </div>
                   <div className="px-8 mb-3">
-               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md">
+               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md  font-roboto-regular">
                 <UserIcon className="size-6 inline mr-3" /><span className="relative top-[3px]">Profile</span>
                </Link>
                 </div>
                    <div className="px-8 mb-3">
-               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md">
+               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md  font-roboto-regular">
                 <ChatBubbleOvalLeftIcon className="size-6 inline mr-3" /><span className="relative top-[3px]">Chat</span>
                </Link>
                 </div>
@@ -69,22 +69,22 @@ const DashboardLayout = () => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <div className="px-8 mb-0 mt-5 mb-3">
-               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md">
+               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md  font-roboto-regular">
                 <CalendarIcon className="size-6 inline mr-3" /><span className="relative top-[3px]">Book</span>
                </Link>
                 </div>
                 <div className="px-8 mb-3">
-               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md">
+               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md  font-roboto-regular">
                 <CalendarDateRangeIcon className="size-6 inline mr-3" /><span className="relative top-[3px]">Availability</span>
                </Link>
                 </div>
                   <div className="px-8 mb-3">
-               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md">
+               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md  font-roboto-regular">
                 <UserIcon className="size-6 inline mr-3" /><span className="relative top-[3px]">Profile</span>
                </Link>
                 </div>
                    <div className="px-8 mb-3">
-               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md">
+               <Link to="/" className="py-3 px-3 block w-[90%] hover:bg-gray-100 hover:rounded-md  font-roboto-regular">
                 <ChatBubbleOvalLeftIcon className="size-6 inline mr-3" /><span className="relative top-[3px]">Chat</span>
                </Link>
                 </div>
@@ -101,8 +101,8 @@ const DashboardLayout = () => {
             </div>
           </DialogPanel>
         </Dialog>
-            <div className="md:col-span-12 lg:col-span-9 h-full">
-
+            <div className="col-span-12 lg:col-span-9 h-full lg:ml-[30%] w-[100%]">
+                 <Outlet />
             </div>
         </div>
         </div>

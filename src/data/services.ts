@@ -11,8 +11,8 @@ export const services = [
         service_details:{
             services:['photography','videography', 'decor'],
             description:'We offer the best services in town from photography to decor. Our clients are always happy with our services',
-            service_images: ["https://images.pexels.com/photos/3739003/pexels-photo-3739003.jpeg","https://images.pexels.com/photos/3738670/pexels-photo-3738670.jpeg"],
-            service_rating: 5,
+            service_images: ["https://images.pexels.com/photos/3739003/pexels-photo-3739003.jpeg","https://images.pexels.com/photos/3738670/pexels-photo-3738670.jpeg","https://images.pexels.com/photos/9303789/pexels-photo-9303789.jpeg","https://images.pexels.com/photos/9924254/pexels-photo-9924254.jpeg"],
+            service_rating: 4.5,
             ratings_count: 241,
             locations:[{region:'Limpopo', areas:['Elim','Giyani','Thohoyandou']}],
             starting_price:450,

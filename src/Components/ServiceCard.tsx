@@ -50,7 +50,7 @@ export interface ServiceListing {
 
 const ServiceCard = (serviceData: ServiceListing) => {
     return (
-        <Link to={`/service/provider/${serviceData.id}`}>
+        <Link to={`/service/provider/profile?id=${serviceData.id}`}>
         <div key={serviceData.id}>
                         <ImageSlide images={serviceData.service_details.service_images!}/>
                         <Avatar avatar_type="small" display_name={serviceData.provider.firstName}  profile_pricture={serviceData.provider.profile_pic}/>
